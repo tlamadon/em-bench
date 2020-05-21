@@ -21,5 +21,5 @@ conda activate em-bench
 You can then call a python estimator by running
 
 ```bash
-pyton pyton/main.py --iter 100 --nobs 1000 --estimator numpy -o result.json
+python python/main.py --iter 100 --nobs 1000 --estimator numpy -o result.json
 ```
