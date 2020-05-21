@@ -8,7 +8,6 @@ import torch
 
 
 def Initial_Parameters(k=2):
-    
     """
         Generate randomly the initial parameter for every method
         :param k: Number of Clusters
@@ -43,8 +42,6 @@ def Initial_Parameters(k=2):
 
 
 def Data_Generator(mean_std, alpha, num_points):
-    
-    
     """
         Generate the Data for every method 
         :param means_std: Array of the mean and Std of the data to generate : np.array ([mean_1,std_1],[mean_2,std_2 ] ... )  

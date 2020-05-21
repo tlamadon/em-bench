@@ -17,3 +17,9 @@ Running the code requires a few dependencies. To keep things simple we try to re
 conda env create -f environment.yml
 conda activate em-bench
 ```
+
+You can then call a python estimator by running
+
+```bash
+pyton pyton/main.py --iter 100 --nobs 1000 --estimator numpy -o result.json
+```
