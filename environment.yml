@@ -1,0 +1,15 @@
+name: em-bench
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - numpy
+  - matplotlib
+  - pandas
+  - seaborn
+  - pylint
+  - pyamg
+  - pyreadr
+  - tqdm
+  - pytorch
+  - tensorflow

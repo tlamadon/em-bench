@@ -1,5 +1,0 @@
-name: EMPy-env
-channels:
-  - defaults
-prefix: C:\Anaconda3\envs\EMPy-env
-
