@@ -29,14 +29,14 @@ if __name__ == "__main__":
     data= Data_Generator (mean_std, alpha, args.nobs)
 
     if args.estimator=="numpy":
-        start_time = time.perf_counter()
-        Expectation_Maximization_Numpy_Vect(data, alpha__0, mean_mu__0, var_v__0, numb_iter= args.iter)
-        time_ = time.perf_counter() - start_time
+        estimator = Estimator_numpy()
 
     if args.estimator=="pytorch":
-        start_time = time.perf_counter()
-        Expectation_Maximization_Pytorch(data, alpha__0, mean_mu__0, var_v__0, numb_iter=args.iter, epsilon=1e-5)
-        time_ = time.perf_counter() - start_time
+        estimator = Estimator_pytorch()
+
+    start_time = time.perf_counter()        
+    estimator.fit(data, alpha__0, mean_mu__0, var_v__0, numb_iter= args.iter)
+    time_ = time.perf_counter() - start_time
 
     # store the results
     dic_result = {'N': args.nobs, 'iter': args.iter, 'time': time_,'estimator': args.estimator}
