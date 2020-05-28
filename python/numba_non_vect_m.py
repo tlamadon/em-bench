@@ -79,7 +79,7 @@ def EM_Gaussian_Mixture_(data_input, alpha, mean_mu, std_sig, epsilon=1e-10, num
         
     return log_likelihood, alpha, mean_mu, std_sig
 
-np.random.seed(30786)
+# np.random.seed(30786)
 
 def data_generator(mean_std, alpha, num_points): 
     random_i  = np.random.choice(len(alpha), size=num_points, replace=True, p=alpha)
@@ -96,7 +96,7 @@ def initial_parameters(k):
     
     return alpha,mean_mu,std_sig
 
-mean_std, alpha = [[3,1],[4,2]],[0.4,0.6]
-data_input= data_generator (mean_std, alpha,100000)
-alpha, mean_mu, std_sig= initial_parameters(2)
-EM_Gaussian_Mixture_(data_input, alpha, mean_mu, std_sig)
+# mean_std, alpha = [[3,1],[4,2]],[0.4,0.6]
+# data_input= data_generator (mean_std, alpha,100000)
+# alpha, mean_mu, std_sig= initial_parameters(2)
+# EM_Gaussian_Mixture_(data_input, alpha, mean_mu, std_sig)

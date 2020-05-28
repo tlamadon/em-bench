@@ -84,7 +84,7 @@ class EM_tensorflow:
                                    self.var_v.assign(var_estim), self.weight_pi.assign(weights_estim) )        
        
  
-    def fit (self,nb_iter):
+    def fit(self,data,alpha__0,mean_mu__0,var_v__0,k=2,treshold=False,nb_iter=100,eps = 10e-5):
         
         # RUN COMPUTATIONAL GRAPH
 

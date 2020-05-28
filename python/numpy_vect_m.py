@@ -12,15 +12,7 @@ class EM_numpy:
     def __init__(self):
         pass
 
-    def fit(data_input, alpha, mean_mu, std_sig, treshold=False, epsilon=1e-5, numb_iter=100):
-        
-        
-        
-        
-        
-        
-        
-        
+    def fit(self,data_input, alpha, mean_mu, std_sig, treshold=False, epsilon=1e-5, numb_iter=100):        
         """
             Runs the Expectation-Maximization algorithm using Numpy Vectorial Version
             :param data: Data used in the EM algorithm

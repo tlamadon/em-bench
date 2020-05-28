@@ -37,7 +37,7 @@ class EM_pytorch:
     def __init__(self):
         pass
 
-    def fit(data,alpha, mean_mu, std_sig ,treshold=False, numb_iter=100,epsilon=1e-5 ):
+    def fit(self,data,alpha, mean_mu, std_sig ,treshold=False, numb_iter=100,epsilon=1e-5 ):
         
         """
             Runs the Expectation-Maximization algorithm using Pytorch
@@ -54,19 +54,14 @@ class EM_pytorch:
         
 
         #Reshape 
-        
         data=data.reshape(data.shape[0],1)
         data=torch.from_numpy(data)
-        
         
         mean_mu= torch.from_numpy(mean_mu)
         std_sig=torch.tensor(np.ones((len(alpha),len(alpha))).tolist())
         alpha=torch.from_numpy(alpha)
         
         # Initialization 
-        
-        
-    
         loglikelihood_init = -float('inf')
         var_v=std_sig**2
         log_var = var_v.log()
@@ -76,7 +71,7 @@ class EM_pytorch:
         # Step 1 : Compute loglikelihood with initial parameters 
         
         
-            log_likelihoods = log_normale( data[None, :, :], mean_mu[:, None, :],  log_var[:, None, :]  )
+            log_likelihoods = log_normal( data[None, :, :], mean_mu[:, None, :],  log_var[:, None, :]  )
                     
             log_likelihoods = log_likelihoods.sum(-1)
         
