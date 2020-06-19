@@ -38,11 +38,9 @@ class EM_tensorflow:
 
         # Initial values for the algorithm 
         
-        self.mean_init = tf.placeholder_with_default( mean_mu__0,shape=[k, 1] )
-        
-        self.var_init = tf.placeholder_with_default( var_v__0,shape=[k, 1] )
-        
-        self.weight_init = tf.placeholder_with_default(alpha__0 , shape=[k] )
+        self.mean_init = tf.placeholder_with_default( mean_mu__0.reshape([k,1]),shape=[k, 1] )        
+        self.var_init = tf.placeholder_with_default( var_v__0,shape=[k, 1] )        
+        self.weight_init = tf.placeholder_with_default(alpha__0.reshape([k]) , shape=[k] )
         
 
         # Variables for training 
