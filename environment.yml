@@ -11,3 +11,5 @@ dependencies:
   - tqdm
   - pytorch
   - tensorflow
+  - doit
+
